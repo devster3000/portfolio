@@ -1,3 +1,4 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -11,8 +12,26 @@ body {
     line-height: 1.5;
 }
 
-/* NAV */
+/* CENTERED 3/5 LAYOUT */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* left 1/5, middle 3/5, right 1/5 */
+}
 
+.container > * {
+    grid-column: 2; /* all content goes in middle column */
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .container > * {
+        grid-column: 1;
+    }
+}
+
+/* NAVIGATION */
 nav {
     padding: 1rem 2rem;
 }
@@ -41,10 +60,10 @@ nav {
 }
 
 /* HERO */
-
 .hero {
-    padding: 6rem 2rem;
+    padding: 6rem 0;
     position: relative;
+    text-align: center;
 }
 
 .hero h1 {
@@ -60,22 +79,7 @@ nav {
     font-weight: bold;
 }
 
-/* SECTIONS */
-
-section {
-    padding: 4rem 2rem;
-    position: relative;
-}
-
-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    font-weight: 900;
-    color: #ff0000;
-}
-
 /* SHORT GREY DIVIDERS */
-
 .hero::after,
 section::after {
     content: "";
@@ -86,8 +90,20 @@ section::after {
     margin: 4rem auto 0 auto;
 }
 
-/* GRID */
+/* SECTIONS */
+section {
+    padding: 4rem 0;
+    position: relative;
+}
 
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 900;
+    color: #ff0000;
+}
+
+/* GRID (skills & projects) */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -95,7 +111,6 @@ section::after {
 }
 
 /* SKILL BOXES */
-
 .box {
     border: 2px solid white;
     padding: 1.5rem;
@@ -103,7 +118,6 @@ section::after {
 }
 
 /* PROJECT BOXES */
-
 .project-box {
     display: block;
     border: 2px solid white;
@@ -124,8 +138,7 @@ section::after {
     font-weight: 900;
 }
 
-/* HOVER EFFECT */
-
+/* HOVER EFFECT FOR PROJECT BOXES */
 .project-box:hover {
     transform: scale(1.08);
     background: #111;
@@ -135,9 +148,8 @@ section::after {
 }
 
 /* FOOTER */
-
 footer {
-    padding: 2rem;
+    padding: 2rem 0;
     text-align: center;
     font-weight: bold;
 }
