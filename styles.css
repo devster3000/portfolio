@@ -147,6 +147,13 @@ section h2 {
     z-index: 10;
 }
 
+.pill {
+    display: flex;
+    align-items: center;
+    border-radius: 9999px;
+    width: fit-content;
+}
+
 /* FOOTER */
 footer {
     padding: 2rem 0;
