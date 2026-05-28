@@ -20,6 +20,18 @@ mobileMenu.classList.toggle("show");
 });
 }
 
+const centerLink = document.getElementById("center-link");
+
+const path = window.location.pathname;
+
+if (path === "/" || path.includes("index")) {
+centerLink.textContent = "Projects";
+centerLink.href = "/projects";
+} else {
+centerLink.textContent = "Home";
+centerLink.href = "/";
+}
+
 });
 </script>
 
