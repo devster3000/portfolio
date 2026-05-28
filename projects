@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Projects • William Cranston</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="noise"></div>
+
+<div class="wrap">
+
+<header class="nav">
+
+<div class="nav-center">
+<a class="projects-btn" id="center-link" href="/">Home</a>
+</div>
+
+<div class="nav-right">
+
+<div class="socials">
+<a href="https://github.com/devster3000">GitHub</a>
+<a href="https://linkedin.com/in/youruser">LinkedIn</a>
+<a href="https://instagram.com/coolmccools0n">Instagram</a>
+</div>
+
+<button class="menu-toggle">☰</button>
+
+</div>
+
+<div class="mobile-menu">
+<a href="https://github.com/devster3000">GitHub</a>
+<a href="https://linkedin.com/in/youruser">LinkedIn</a>
+<a href="https://instagram.com/coolmccools0n">Instagram</a>
+</div>
+
+</header>
+
+<main class="projects-page">
+
+<section class="project-card">
+
+<div class="project-image">
+<img src="assets/project1.png" alt="Project preview">
+</div>
+
+<div class="project-content">
+
+<h2>MyCareers Android App</h2>
+
+<p>
+A simple educational android application for the MyCareers service. Uses course data from the website to provide a useful and accurate experience.
+</p>
+
+<a class="github-btn" href="https://github.com/devster3000/mycareers-app">
+
+<img src="assets/github.png" alt="GitHub logo">
+
+<span>View on GitHub</span>
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<section class="project-card">
+
+<div class="project-image">
+<img src="assets/project2.png" alt="Project preview">
+</div>
+
+<div class="project-content">
+
+<h2>Shroud</h2>
+
+<p>
+Privacy-focused email and identity project with a dark purple aesthetic
+and modern glass UI.
+</p>
+
+<a class="github-btn" href="https://github.com/youruser/shroud">
+
+<img src="assets/github.png" alt="GitHub logo">
+
+<span>View on GitHub</span>
+
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+<footer id="foot">
+<span>© 2026 William Cranston</span>
+</footer>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+const toggle = document.querySelector(".menu-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+if (toggle && mobileMenu) {
+toggle.addEventListener("click", () => {
+mobileMenu.classList.toggle("show");
+});
+}
+
+});
+</script>
+
+</body>
+</html>
