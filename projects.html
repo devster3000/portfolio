@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 
+<script>
 const githubLogo = document.getElementById("github-logo");
 
 function updateGithubLogo() {
@@ -23,6 +24,8 @@ updateGithubLogo();
 window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", updateGithubLogo);
+
+</script>
 
 <body>
 
