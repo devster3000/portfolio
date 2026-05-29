@@ -8,6 +8,22 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 
+const githubLogo = document.getElementById("github-logo");
+
+function updateGithubLogo() {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        githubLogo.src = "assets/github-white.png";
+    } else {
+        githubLogo.src = "assets/github-black.png";
+    }
+}
+
+updateGithubLogo();
+
+window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", updateGithubLogo);
+
 <body>
 
 <div class="noise"></div>
