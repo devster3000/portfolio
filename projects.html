@@ -8,25 +8,6 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<script>
-const githubLogo = document.getElementById("github-logo");
-
-function updateGithubLogo() {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        githubLogo.src = "assets/github-white.png";
-    } else {
-        githubLogo.src = "assets/github-black.png";
-    }
-}
-
-updateGithubLogo();
-
-window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", updateGithubLogo);
-
-</script>
-
 <body>
 
 <div class="noise"></div>
@@ -77,7 +58,18 @@ A simple educational android application for the MyCareers service. Uses course 
 
 <a class="github-btn" href="https://github.com/devster3000/mycareers-app">
 
-<img src="assets/github.svg" alt="GitHub logo">
+<picture>
+
+    <source
+        srcset="assets/github-black.png"
+        media="(prefers-color-scheme: dark)"
+    >
+
+    <img
+        src="assets/github-white.png"
+        alt="GitHub"
+    >
+</picture>
 
 <span>View on GitHub</span>
 
@@ -103,9 +95,20 @@ A simple educational android application for the MyCareers service. Uses course 
 A simple questionnaire website, used to get a user's prominent skillset. Has an adaptive UI for both mobile and desktop screens
 </p>
 
-<a class="github-btn" href="https://github.com/youruser/shroud">
+<a class="github-btn" href="https://github.com/devster3000/solent-skills">
 
-<img src="assets/github.svg" alt="GitHub logo">
+<picture>
+
+    <source
+        srcset="assets/github-black.png"
+        media="(prefers-color-scheme: dark)"
+    >
+
+    <img
+        src="assets/github-white.png"
+        alt="GitHub"
+    >
+</picture>
 
 <span>View on GitHub</span>
 
