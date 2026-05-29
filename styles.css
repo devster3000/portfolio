@@ -492,12 +492,13 @@ object-fit: contain;
 @media (max-width: 700px) {
 
 .projects-page {
-padding: 2rem 1rem;
-gap: 1.5rem;
+grid-template-columns: 1fr;
+justify-items: center;
 }
 
-.project-content {
-padding: 1.2rem;
+.project-card {
+width: 100%;
+max-width: 500px;
 }
 
 }
