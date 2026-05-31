@@ -279,11 +279,12 @@ footer{
 }
 
 .nav {
-position: relative;
+position: left;
 display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 1rem 2rem;
+margin-left: 1rem
 gap: 1rem;
 }
 
