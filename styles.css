@@ -207,15 +207,6 @@ p{
         var(--bg);
 }
 
-.primary img {
-
-width: 18px;
-height: 18px;
-
-object-fit: contain;
-
-}
-
 .secondary{
 
     color:
@@ -279,12 +270,11 @@ footer{
 }
 
 .nav {
-position: left;
+position: relative;
 display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 1rem 2rem;
-margin-left: 1rem
 gap: 1rem;
 }
 
