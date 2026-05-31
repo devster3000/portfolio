@@ -335,7 +335,7 @@ cursor: pointer;
 display: none;
 position: absolute;
 top: 100%;
-right: 1rem;
+left: 1rem;
 margin-top: 1rem;
 padding: 1rem;
 border-radius: 18px;
