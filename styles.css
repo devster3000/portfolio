@@ -68,6 +68,7 @@ body{
 
 .nav{
 
+    margin-top: 1rem;
     padding:
         1.5rem clamp(1rem, 5vw, 4rem);
 }
