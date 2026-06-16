@@ -1,99 +1,89 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>William Cranston</title>
-<link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>William Cranston</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector(".menu-toggle");
+      const mobileMenu = document.querySelector(".mobile-menu");
 
-const toggle = document.querySelector(".menu-toggle");
-const mobileMenu = document.querySelector(".mobile-menu");
+      if (toggle && mobileMenu) {
+        toggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("show");
+        });
+      }
 
-if (toggle && mobileMenu) {
-toggle.addEventListener("click", () => {
-mobileMenu.classList.toggle("show");
-});
-}
+      const centerLink = document.getElementById("center-link");
 
-const centerLink = document.getElementById("center-link");
+      const path = window.location.pathname;
 
-const path = window.location.pathname;
+      if (path === "/" || path.includes("index")) {
+        centerLink.textContent = "Projects";
+        centerLink.href = "/projects";
+      } else {
+        centerLink.textContent = "Home";
+        centerLink.href = "/";
+      }
+    });
+  </script>
 
-if (path === "/" || path.includes("index")) {
-centerLink.textContent = "Projects";
-centerLink.href = "/projects";
-} else {
-centerLink.textContent = "Home";
-centerLink.href = "/";
-}
+  <body>
+    <div class="noise"></div>
 
-});
-</script>
+    <header class="nav">
+      <div class="nav-center">
+        <a class="projects-btn" href="/projects">Projects</a>
+      </div>
 
+      <div class="nav-left">
+        <div class="socials">
+          <a href="https://github.com/devster3000" target="_blank">GitHub</a>
+          <a href="https://instagram.com/coolmccools0n" target="_blank"
+            >Instagram</a
+          >
+        </div>
 
-<body>
-<div class="noise"></div>
+        <button class="menu-toggle" aria-label="Menu">☰</button>
+      </div>
 
+      <div class="mobile-menu">
+        <a href="https://github.com/devster3000" target="_blanm">GitHub</a>
+        <a href="https://instagram.com/coolmccools0n" target="_blank"
+          >Instagram</a
+        >
+      </div>
+    </header>
 
-<header class="nav">
+    <div class="wrap">
+      <main class="hero">
+        <section class="glass">
+          <h1>Sometimes making things</h1>
 
-<div class="nav-center">
-<a class="projects-btn" href="/projects">Projects</a>
-</div>
+          <p>
+            Idfk. I just make stuff sometimes. Maybe its useful maybe its not
+          </p>
 
-<div class="nav-left">
+          <div class="actions">
+            <a class="btn primary" href="https://github.com/devster3000"
+              >See my GitHub</a
+            >
 
-<div class="socials">
-<a href="https://github.com/devster3000" target="_blank">GitHub</a>
-<a href="https://linkedin.com/in/youruser" target="_blank">LinkedIn</a>
-<a href="https://instagram.com/coolmccools0n" target="_blank">Instagram</a>
-</div>
+            <a class="btn secondary" href="https://youtu.be/48rz8udZBmQ"
+              >See where this goes</a
+            >
+          </div>
+        </section>
+      </main>
 
-<button class="menu-toggle" aria-label="Menu">
-☰
-</button>
-
-</div>
-
-<div class="mobile-menu">
-<a href="https://github.com/devster3000" target="_blanm">GitHub</a>
-<a href="https://linkedin.com/in/youruser" target="_blank">LinkedIn</a>
-<a href="https://instagram.com/coolmccools0n" target="_blank">Instagram</a>
-</div>
-
-</header>
-
-<div class="wrap">
-
-<main class="hero">
-<section class="glass">
-
-<h1>Sometimes making things</h1>
-
-<p>
-Idfk. I just make stuff sometimes. Maybe its useful maybe its not
-</p>
-
-
-<div class="actions">
-
-<a class="btn primary" href="https://github.com/devster3000">See my GitHub</a>
-
-<a class="btn secondary" href="https://youtu.be/48rz8udZBmQ">See where this goes</a>
-</div>
-
-</section>
-</main>
-
-<footer id="foot">
-<span>© 2026 William Cranston</span>
-</footer>
-
-</div>
-</body>
+      <footer id="foot">
+        <span>© 2026 William Cranston</span>
+      </footer>
+    </div>
+  </body>
 </html>
