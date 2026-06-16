@@ -28,11 +28,6 @@
   }
 }
 
-:forced-visible:focus {
-  outline: 3px solid #ffff00;
-  outline-offset: 3px;
-}
-
 * {
   box-sizing: border-box;
 }
