@@ -308,7 +308,6 @@ footer {
 
 .mobile-menu a {
   /* Mobile links styling override */
-  color: black;
   text-decoration: none;
   font-weight: 600;
 }
