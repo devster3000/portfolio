@@ -47,6 +47,12 @@ body {
   font-family: Inter, system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
+  cursor: url("cursor-files/cursor_pointer.png"), auto;
+}
+
+a,
+button {
+  cursor: url("cursor-files/cursor_link.png"), pointer;
 }
 
 /* --- LAYOUT --- */
