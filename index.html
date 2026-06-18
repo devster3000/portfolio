@@ -5,58 +5,42 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
     <title>William Cranston</title>
+
     <link rel="stylesheet" href="styles.css" />
   </head>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.querySelector(".menu-toggle");
-      const mobileMenu = document.querySelector(".mobile-menu");
-
-      if (toggle && mobileMenu) {
-        toggle.addEventListener("click", () => {
-          mobileMenu.classList.toggle("show");
-        });
-      }
-
-      const centerLink = document.getElementById("center-link");
-
-      const path = window.location.pathname;
-
-      if (path === "/" || path.includes("index")) {
-        centerLink.textContent = "Projects";
-        centerLink.href = "/projects";
-      } else {
-        centerLink.textContent = "Home";
-        centerLink.href = "/";
-      }
-    });
-  </script>
 
   <body>
     <div class="noise"></div>
 
     <header class="nav">
-      <div class="nav-center">
-        <a class="projects-btn" href="/projects">Projects</a>
+      <div class="nav-top">
+        <div class="nav-left">
+          <div class="socials">
+            <a href="https://github.com/devster3000" target="_blank">GitHub</a>
+            <a href="https://instagram.com/coolmccools0n" target="_blank"
+              >Instagram</a
+            >
+          </div>
+
+          <button class="menu-toggle" aria-label="Menu">☰</button>
+        </div>
+
+        <div class="nav-center">
+          <a href="/projects.html" class="projects-btn" id="nav-title"
+            >Projects</a
+          >
+        </div>
       </div>
 
-      <div class="nav-left">
-        <div class="socials">
+      <div class="mobile-menu">
+        <div class="menu-links">
           <a href="https://github.com/devster3000" target="_blank">GitHub</a>
           <a href="https://instagram.com/coolmccools0n" target="_blank"
             >Instagram</a
           >
         </div>
 
-        <button class="menu-toggle" aria-label="Menu">☰</button>
-      </div>
-
-      <div class="mobile-menu">
-        <a href="https://github.com/devster3000" target="_blanm">GitHub</a>
-        <a href="https://instagram.com/coolmccools0n" target="_blank"
-          >Instagram</a
-        >
+        <div class="menu-divider"></div>
       </div>
     </header>
 
@@ -70,13 +54,13 @@
           </p>
 
           <div class="actions">
-            <a class="btn primary" href="https://github.com/devster3000"
-              >See my GitHub</a
-            >
+            <a class="btn primary" href="https://github.com/devster3000">
+              See my GitHub
+            </a>
 
-            <a class="btn secondary" href="https://youtu.be/48rz8udZBmQ"
-              >See where this goes</a
-            >
+            <a class="btn secondary" href="https://youtu.be/48rz8udZBmQ">
+              See where this goes
+            </a>
           </div>
         </section>
       </main>
@@ -85,5 +69,35 @@
         <span>© 2026 William Cranston</span>
       </footer>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.querySelector(".menu-toggle");
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const title = document.getElementById("nav-title");
+
+        let open = false;
+
+        title.style.pointerEvents = "auto";
+
+        toggle.addEventListener("click", () => {
+          open = !open;
+
+          mobileMenu.classList.toggle("show");
+
+          // icon swap
+          toggle.textContent = open ? "✕" : "☰";
+
+          // title swap
+          title.textContent = open ? "Links" : "Projects";
+
+          if (open) {
+            title.style.pointerEvents = "none";
+          } else {
+            title.style.pointerEvents = "auto";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
