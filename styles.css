@@ -1,4 +1,7 @@
+/* --- ROOT VARIABLES --- */
+
 :root {
+  /* Base color system and theme variables */
   color-scheme: light dark;
 
   --bg: #ffffff;
@@ -12,44 +15,49 @@
   --border: #d3d3d3;
 }
 
+/* --- DARK MODE OVERRIDES --- */
+
 @media (prefers-color-scheme: dark) {
   :root {
+    /* Overrides for dark theme */
     --bg: #141418;
-
     --surface: #18181d;
-
     --text: #f4f4f7;
-
     --muted: #a6aabc;
-
     --accent: #a79fff;
-
     --border: #272730;
   }
 }
 
+/* --- GLOBAL RESET --- */
+
 * {
+  /* Ensure consistent box sizing across elements */
   box-sizing: border-box;
 }
 
 html,
 body {
+  /* Remove default spacing */
   margin: 0;
 }
 
 body {
+  /* Base typography and colors */
   font-family: Inter, system-ui, sans-serif;
-
   background: var(--bg);
-
   color: var(--text);
 }
 
-.wrap {
-  width: min(960px, 90%);
+/* --- LAYOUT --- */
 
+.wrap {
+  /* Constrains content width and centers it */
+  width: min(960px, 90%);
   margin: 0 auto;
 }
+
+/* --- NAVIGATION --- */
 
 .nav {
   margin-top: 1rem;
@@ -57,110 +65,102 @@ body {
 }
 
 .brand {
+  /* Brand/logo alignment */
   display: inline-flex;
-
   align-items: center;
-
   gap: 12px;
 
   color: inherit;
-
   text-decoration: none;
-
   font-weight: 600;
 }
 
+/* --- HERO SECTION --- */
+
 .hero {
+  /* Vertically centered hero section */
   min-height: 72vh;
-
   display: grid;
-
   align-items: center;
 }
 
 .glass {
+  /* Transparent container placeholder */
   padding: 0;
-
   background: transparent;
 }
 
+/* --- UI ELEMENTS --- */
+
 .pill {
+  /* Rounded label element */
   display: inline-block;
-
   padding: 8px 12px;
-
   border: 1px solid var(--border);
-
   border-radius: 999px;
-
   color: var(--muted);
-
   font-size: 0.9rem;
 }
 
+/* --- TYPOGRAPHY --- */
+
 h1 {
+  /* Main heading styling */
   margin: 28px 0 20px;
-
   font-size: clamp(3rem, 10vw, 5.5rem);
-
   line-height: 0.95;
-
   letter-spacing: -0.05em;
-
   max-width: 9ch;
 }
 
 p {
+  /* Body text constraints */
   max-width: 620px;
-
   color: var(--muted);
-
   font-size: 1.08rem;
-
   line-height: 1.8;
 }
 
+/* --- ACTION BUTTONS --- */
+
 .actions {
   display: flex;
-
   gap: 12px;
-
   margin-top: 36px;
 }
 
 .btn {
+  /* Base button styling */
   padding: 14px 18px;
-
   border-radius: 12px;
-
   text-decoration: none;
 }
 
 .primary {
+  /* Primary button variant */
   background: var(--text);
-
   color: var(--bg);
 }
 
 .secondary {
+  /* Secondary button variant */
   color: var(--text);
-
   border: 1px solid var(--border);
 }
 
+/* --- FOOTER --- */
+
 footer {
   padding: 48px 0;
-
   color: var(--muted);
-
   border-top: 1px solid var(--border);
 
   display: flex;
-
   text-align: center;
-
   justify-content: space-between;
 }
+
+/* --- RESPONSIVE (BASE) --- */
 
 @media (max-width: 700px) {
   .actions {
@@ -169,18 +169,19 @@ footer {
 
   .btn {
     width: 100%;
-
     text-align: center;
   }
 
   footer {
     flex-direction: column;
-
     gap: 8px;
   }
 }
 
+/* --- NAVIGATION STRUCTURE --- */
+
 .nav {
+  /* Main navigation layout */
   position: relative;
   display: flex;
   align-items: center;
@@ -191,6 +192,7 @@ footer {
 
 .nav-left,
 .nav-right {
+  /* Left and right navigation groups */
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -200,12 +202,14 @@ footer {
 .nav-left a,
 .nav-right a,
 .mobile-menu a {
+  /* Shared link styling */
   text-decoration: none;
   color: inherit;
   font-weight: 500;
 }
 
 .nav-center {
+  /* Centered navigation content */
   position: absolute;
   pointer-events: none;
   left: 50%;
@@ -214,11 +218,11 @@ footer {
 }
 
 .nav-top {
+  /* Top navigation row */
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-
   width: 100%;
 }
 
@@ -226,14 +230,19 @@ footer {
   flex-shrink: 0;
 }
 
+/* --- NAVIGATION COMPONENTS --- */
+
 .projects-btn {
+  /* Styled CTA button */
   padding: 0.7rem 1.4rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
+
   text-decoration: none;
   color: inherit;
   font-weight: 600;
+
   border: 1px solid rgba(255, 255, 255, 0.12);
   transition: 0.2s ease;
 }
@@ -243,11 +252,13 @@ footer {
 }
 
 .socials {
+  /* Social links container */
   display: flex;
   gap: 1rem;
 }
 
 .menu-toggle {
+  /* Mobile menu toggle button */
   display: none;
   background: transparent;
   border: none;
@@ -257,8 +268,8 @@ footer {
 }
 
 .mobile-menu {
+  /* Collapsible mobile menu */
   width: 100%;
-
   overflow: hidden;
 
   max-height: 0;
@@ -272,19 +283,20 @@ footer {
 }
 
 .mobile-menu.show {
+  /* Expanded mobile menu state */
   max-height: 130px;
 }
 
 .menu-links {
+  /* Desktop-style links inside mobile */
   display: flex;
   justify-content: center;
-
   gap: 3rem;
-
   padding: 0.75rem 0 0.5rem;
 }
 
 .menu-divider {
+  /* Divider line */
   border-bottom: 2px dashed var(--border);
   width: 100%;
 }
@@ -295,6 +307,7 @@ footer {
 }
 
 .mobile-menu a {
+  /* Mobile links styling override */
   color: black;
   text-decoration: none;
   font-weight: 600;
@@ -304,7 +317,7 @@ footer {
   display: flex;
 }
 
-/* MOBILE */
+/* --- NAV RESPONSIVE --- */
 
 @media (max-width: 900px) {
   .socials {
@@ -329,9 +342,10 @@ footer {
   }
 }
 
-/* PROJECTS PAGE */
+/* --- PROJECTS PAGE --- */
 
 .projects-page {
+  /* Responsive grid layout for projects */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
@@ -339,6 +353,7 @@ footer {
 }
 
 .project-card {
+  /* Individual project container */
   display: flex;
   flex-direction: column;
 
@@ -359,12 +374,14 @@ footer {
 }
 
 .project-image {
+  /* Image wrapper */
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
 .project-image img {
+  /* Ensures image fills container */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -372,6 +389,7 @@ footer {
 }
 
 .project-content {
+  /* Card content layout */
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -388,7 +406,10 @@ footer {
   opacity: 0.8;
 }
 
+/* --- PROJECT BUTTON --- */
+
 .github-btn {
+  /* GitHub link button */
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
@@ -396,14 +417,12 @@ footer {
   width: fit-content;
 
   padding: 14px 18px;
-
   border-radius: 12px;
 
   background: var(--text);
   color: var(--bg);
 
   text-decoration: none;
-
   font-weight: 600;
 
   transition: 0.2s ease;
@@ -417,11 +436,10 @@ footer {
 .github-btn img {
   width: 18px;
   height: 18px;
-
   object-fit: contain;
 }
 
-/* MOBILE */
+/* --- PROJECTS RESPONSIVE --- */
 
 @media (max-width: 700px) {
   .projects-page {
