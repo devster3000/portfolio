@@ -421,6 +421,10 @@ footer {
   font-weight: 700;
 }
 
+.project-content h2 a {
+  color: inherit;
+}
+
 .project-content p {
   line-height: 1.6;
   opacity: 0.8;
@@ -471,4 +475,141 @@ footer {
     width: 100%;
     max-width: 500px;
   }
+}
+
+/* --- APP PAGE DESIGN --- */
+
+.app-header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.app-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  padding: 0;
+
+  color: inherit;
+}
+
+.app-meta {
+  max-width: 600px;
+}
+
+.app-header h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.app-subtitle {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.app-icon img {
+  width: 100px;
+  height: 100px;
+
+  border-radius: 22px;
+  object-fit: cover;
+
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 700px) {
+  .app-header-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .app-icon {
+    order: -1;
+  }
+
+  .app-icon img {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+  }
+
+  .app-meta h1 {
+    font-size: 1.8rem;
+  }
+
+  .app-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .app-actions {
+    margin-top: 1.2rem;
+  }
+}
+
+/* -- SCREENSHOTS -- */
+
+.app-screenshots {
+  margin: 2rem 0;
+}
+
+.app-screenshots h2 {
+  margin-bottom: 1rem;
+}
+
+.screenshots-scroll {
+  display: flex;
+  gap: 1rem;
+
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+
+  scroll-snap-type: x mandatory;
+}
+
+.screenshots-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.screenshots-scroll::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+
+.screenshots-scroll img {
+  height: 300px;
+  border-radius: 16px;
+
+  object-fit: cover;
+
+  flex-shrink: 0;
+
+  scroll-snap-align: start;
+
+  border: 1px solid var(--border);
+}
+@media (max-width: 700px) {
+  .screenshots-scroll img {
+    height: 220px;
+  }
+}
+
+/* -- ABOUT SECTION -- */
+
+.app-about {
+  margin-top: 2.5rem;
+}
+
+.app-about h2 {
+  margin-bottom: 1rem;
+}
+
+.app-about p {
+  margin-bottom: 1rem;
 }
